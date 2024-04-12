@@ -370,6 +370,13 @@ a:hover {
   position: relative;
 }
 
+.app-mockup-embed {
+  align-self: stretch;
+  margin-top: -150px;
+  margin-bottom: -150px;
+  margin-left: -250px;
+}
+
 @media screen and (max-width: 991px) {
   .catch-phrase {
     width: 500px;
@@ -410,6 +417,13 @@ a:hover {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 20px;
+  }
+
+  .app-mockup-embed {
+    align-self: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 
@@ -670,5 +684,3 @@ a:hover {
     grid-column: span 3 / span 3;
   }
 }
-
-

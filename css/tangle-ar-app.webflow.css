@@ -382,7 +382,7 @@ a:hover {
 }
 
 .pop-up {
-  z-index: 150;
+  z-index: 200;
   background-color: rgba(4, 24, 39, .8);
   display: none;
   position: fixed;

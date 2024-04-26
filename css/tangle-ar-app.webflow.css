@@ -3,10 +3,11 @@
   --black: black;
 }
 
-.w-backgroundvideo-backgroundvideoplaypausebutton:focus-visible {
-  outline-offset: 2px;
-  border-radius: 50%;
-  outline: 2px solid #3b79c3;
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .w-layout-vflex {
@@ -28,13 +29,6 @@
   flex-direction: row;
   align-items: flex-start;
   display: flex;
-}
-
-.w-layout-blockcontainer {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
 }
 
 .w-layout-layout {
@@ -72,11 +66,13 @@ body {
 }
 
 h1 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: rift-soft, sans-serif;
-  font-size: 20em;
-  font-weight: 700;
+  filter: blur(5px);
+  color: #002b4d;
+  text-transform: uppercase;
+  font-family: Asap Condensed, sans-serif;
+  font-size: 90px;
+  font-style: italic;
+  font-weight: 600;
 }
 
 h2 {
@@ -134,10 +130,11 @@ a:hover {
 }
 
 .flex-block.cta {
-  background-color: rgba(255, 255, 255, .6);
-  height: 95vh;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  height: 85vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -157,10 +154,11 @@ a:hover {
   flex: none;
   justify-content: center;
   align-self: stretch;
-  align-items: stretch;
+  align-items: center;
   height: 100%;
   margin: 0;
   display: flex;
+  overflow: auto;
 }
 
 .catch-phrase {
@@ -327,14 +325,20 @@ a:hover {
 }
 
 .link-block {
-  z-index: 100;
-  width: 100px;
-  height: 100px;
+  z-index: 50;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   position: fixed;
   top: 3%;
   bottom: auto;
   left: 3%;
   right: auto;
+}
+
+.logo {
+  width: 100px;
 }
 
 .section {
@@ -358,14 +362,14 @@ a:hover {
 }
 
 .spline-scene-div {
-  z-index: 50;
+  z-index: 100;
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
 .catch-phrase-div {
-  z-index: 100;
+  z-index: 150;
   margin-top: 150px;
   position: relative;
 }
@@ -375,6 +379,50 @@ a:hover {
   margin-top: -150px;
   margin-bottom: -150px;
   margin-left: -250px;
+}
+
+.pop-up {
+  z-index: 150;
+  background-color: rgba(4, 24, 39, .8);
+  display: none;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.container {
+  flex-flow: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+  display: flex;
+}
+
+.typeform-wrapper {
+  background-color: #fff;
+  height: 85vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: block;
+  position: relative;
+}
+
+.close-popup {
+  color: #fff;
+  text-align: right;
+  align-self: flex-end;
+  font-family: Varela Round, sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 70px;
+  display: block;
+  position: absolute;
+  top: -5%;
+  bottom: auto;
+  left: auto;
+  right: -8%;
 }
 
 @media screen and (max-width: 991px) {
@@ -425,9 +473,30 @@ a:hover {
     margin-bottom: 0;
     margin-left: 0;
   }
+
+  .pop-up {
+    display: block;
+  }
+
+  .typeform-wrapper {
+    height: 95vh;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .close-popup {
+    color: #076ab7;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  h1 {
+    filter: blur(3px);
+    font-size: 50px;
+  }
+
   .flex-block {
     padding-left: 15px;
     padding-right: 15px;
@@ -491,6 +560,7 @@ a:hover {
   }
 
   .logo {
+    width: 60px;
     max-width: 60%;
   }
 
@@ -505,6 +575,16 @@ a:hover {
   .paragraph {
     margin-bottom: 0;
     line-height: 0;
+  }
+
+  .typeform-wrapper {
+    height: 100vh;
+    margin: 15px;
+  }
+
+  .close-popup {
+    font-size: 50px;
+    line-height: 50px;
   }
 }
 

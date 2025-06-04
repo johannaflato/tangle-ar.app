@@ -270,6 +270,8 @@ a:hover {
   color: #0669b6;
   background-color: #fff;
   padding: 15px 30px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .about-header-cell {
